@@ -54,9 +54,9 @@ highlight a scalable path toward universally foundation models.
 
 ## 🚩 Plan
 <!-- - [ ] Release the weights. -->
-- [X] Release the training scripts.
-- [X] Release model weights.
+- [X] Release model weights and demo.
 - [ ] Release the segmentation and evaluation code.
+- [ ] Release the training scripts.
 <!-- --- -->
 
 
