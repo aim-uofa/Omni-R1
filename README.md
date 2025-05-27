@@ -210,7 +210,7 @@ We sincerely appreciate the contributions of the open-source community. The rela
 If you find this work helpful for your research, please cite:
 
 ```BibTeX
-@misc{zhong2025omnir1reinforcementlearningomnimodal,
+@article{zhong2025omnir1reinforcementlearningomnimodal,
       title={Omni-R1: Reinforcement Learning for Omnimodal Reasoning via Two-System Collaboration}, 
       author={Hao Zhong and Muzhi Zhu and Zongze Du and Zheng Huang and Canyu Zhao and Mingyu Liu and Wen Wang and Hao Chen and Chunhua Shen},
       year={2025},
