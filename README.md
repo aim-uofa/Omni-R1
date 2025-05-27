@@ -166,7 +166,7 @@ def inference(video_path, prompt, sys_prompt):
     )
 
     inputs = processor(
-        text=text_input[0],
+        text=text_input,
         images=image_input,
         audios=audio_input,
         videos=video_input,
