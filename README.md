@@ -18,7 +18,7 @@ Zheng Huang<sup></sup>, &nbsp;
 
 *Equal contribution
 
-[📄 **Paper**](#)&nbsp; | &nbsp;[🌐 **Project Page**](https://aim-uofa.github.io/OmniR1/) | &nbsp;[🤖 **Model Weight**](https://www.modelscope.cn/models/jxzh2020/Omni-R1)
+[📄 **Paper**](#)&nbsp; | &nbsp;[🌐 **Project Page**](https://aim-uofa.github.io/OmniR1/) | &nbsp;[🤖 **Model Weight**](https://www.modelscope.cn/models/jxzh2020/Omni-R1) | &nbsp;[🤗 **Model Weight**](https://huggingface.co/Haoz0206/Omni-R1)
 </div>
 
 
