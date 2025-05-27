@@ -18,7 +18,7 @@ Zheng Huang<sup></sup>, &nbsp;
 
 *Equal contribution
 
-[📄 **Paper**](#)&nbsp; | &nbsp;[🌐 **Project Page**](https://aim-uofa.github.io/OmniR1/) | &nbsp;[🤖 **Model Weight**](https://www.modelscope.cn/models/jxzh2020/Omni-R1) | &nbsp;[🤗 **Model Weight**](https://huggingface.co/Haoz0206/Omni-R1)
+[📄 **Paper**](https://arxiv.org/abs/2505.20256)&nbsp; | &nbsp;[🌐 **Project Page**](https://aim-uofa.github.io/OmniR1/) | &nbsp;[🤖 **Model Weights**](https://www.modelscope.cn/models/jxzh2020/Omni-R1) | &nbsp;[🤗 **Model Weights**](https://huggingface.co/Haoz0206/Omni-R1)
 </div>
 
 
@@ -210,5 +210,13 @@ We sincerely appreciate the contributions of the open-source community. The rela
 If you find this work helpful for your research, please cite:
 
 ```BibTeX
-
+@misc{zhong2025omnir1reinforcementlearningomnimodal,
+      title={Omni-R1: Reinforcement Learning for Omnimodal Reasoning via Two-System Collaboration}, 
+      author={Hao Zhong and Muzhi Zhu and Zongze Du and Zheng Huang and Canyu Zhao and Mingyu Liu and Wen Wang and Hao Chen and Chunhua Shen},
+      year={2025},
+      eprint={2505.20256},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2505.20256}, 
+}
 ```
