@@ -132,7 +132,7 @@ from qwen_omni_utils import process_mm_info, process_vision_info
 
 omni_path = "/path/to/Omni-R1"
 
-# Omni-R1 is Qwen2_5OmniThinker, not Qwen2_5OmniModel, so inference code is different from that of Qwen offical codes.
+# Omni-R1 is Qwen2_5OmniThinker, not Qwen2_5OmniModel, so inference code is different from that of Qwen official codes.
 model = Qwen2_5OmniThinkerForConditionalGeneration.from_pretrained(
     omni_path,
     device_map="auto",
