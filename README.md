@@ -14,7 +14,8 @@ Zheng Huang<sup></sup>, &nbsp;
 [Hao Chen](https://scholar.google.com/citations?user=FaOqRpcAAAAJ)<sup></sup>, &nbsp;
 [Chunhua Shen](https://cshen.github.io)<sup></sup>
 
-[Zhejiang University](https://www.zju.edu.cn/english/)
+[Zhejiang University](https://www.zju.edu.cn/english/),
+[Ant Group](https://www.antgroup.com/en/)
 
 *Equal contribution
 
@@ -55,8 +56,8 @@ highlight a scalable path toward universally foundation models.
 ## 🚩 Plan
 <!-- - [ ] Release the weights. -->
 - [X] Release model weights and demo.
+- [X] Release the training scripts.
 - [ ] Release the segmentation and evaluation code.
-- [ ] Release the training scripts.
 <!-- --- -->
 
 
@@ -75,26 +76,25 @@ conda activate omni
 
 # install packages
 pip install -r requirements.txt
-pip install -e src/qwen-omni-utils[decord]
+pip install -e omni_utils/qwen-omni-utils[decord]
 pip install flash-attn --no-build-isolation
-pip install transformers/transformers_omni.zip
+pip install omni_utils/transformers/transformers_omni.zip
 
 # replace transformers Qwen2.5-Omni .py file
-bash replace_omni.sh
+bash omni_utils/replace_omni.sh
 ```
 
 This project also supports `uv`, if preferred,
 
 ```bash
 uv sync --no-build-isolation-package flash-attn
-source .venv/bin/activate
 
 # replace transformers Qwen2.5-Omni .py file
-bash replace_omni.sh
+uv run omni_utils/replace_omni.sh
 ```
 
 ### 📊 Download Datasets
-Download and extract the datasets you need and prepare a `src/r1-v/datasets.json` according to `src/r1-v/datasets_demo.json`.
+Download and extract the datasets you need and prepare a `src/datasets.json` according to `src/datasets_demo.json`.
 
 - ReVOS and MeVIS datasets are directly selected from [Sa2VA](https://github.com/magic-research/Sa2VA) training dataset, which can be downloaded [here](https://huggingface.co/datasets/Dense-World/Sa2VA-Training). Please refer to Sa2VA for usage.
 - refCOCOg_2k_840 from [SegZero](https://github.com/dvlab-research/Seg-Zero) can be downloaded [here](https://huggingface.co/datasets/Ricky06662/refCOCOg_2k_840).
@@ -103,16 +103,16 @@ Download and extract the datasets you need and prepare a `src/r1-v/datasets.json
 ### 🏋️ Training
 
 ```bash
-# for uv, source .venv/bin/activate
+# for uv, `source .venv/bin/activate` or directly use `uv run`
 conda activate omni
 
 # start SAM server first. If not training VOS or alpha_g is set to 0.0, then SAM server is not necessary.
-bash src/scripts/run_sam_server.sh
+bash scripts/run_sam_server.sh
 
 # start training, by default this script does not need a SAM server.
-bash src/scripts/omni_r1_run_training.sh
+bash scripts/run_training.sh
 ```
-To connect to an existing SAM server, you can set up `SAM_HOST` and `SAM_PORT` as environment variables in `src/scripts/omni_r1_run_training.sh`.
+To connect to an existing SAM server, you can set up `SAM_HOST` and `SAM_PORT` as environment variables in `scripts/run_training.sh`.
 
 
 ## 🔍 Inference

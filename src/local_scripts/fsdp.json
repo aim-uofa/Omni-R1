@@ -1,0 +1,11 @@
+{
+  "fsdp_auto_wrap_policy": "TRANSFORMER_BASED_WRAP",
+  "fsdp_sharding_strategy": "FULL_SHARD",
+  "fsdp_offload_params": true,
+  "use_orig_params": true,
+  "mixed_precision": true,
+  "forward_prefetch": false,
+  "backward_prefetch": "BACKWARD_PRE",
+  "xla": false,
+  "limit_all_gathers": true
+}

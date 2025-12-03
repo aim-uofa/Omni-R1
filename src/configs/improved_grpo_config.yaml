@@ -1,0 +1,67 @@
+# 改进的GRPO训练配置，支持经验回放
+# 基础模型参数
+model_name_or_path: /mnt/public/weight/Qwen2.5-Omni-7B
+model_revision: main
+torch_dtype: bfloat16
+
+# 数据集配置
+datasets_json: datasets_h100.json
+training_datasets:
+  - ReVOS
+  - MeVIS
+
+# 基础训练参数
+bf16: true
+do_eval: false
+eval_strategy: "no"
+gradient_accumulation_steps: 1
+gradient_checkpointing: true
+learning_rate: 1.0e-6
+lr_scheduler_type: cosine
+weight_decay: 0.01
+logging_steps: 1
+logging_strategy: steps
+max_grad_norm: 5.0
+num_train_epochs: 1
+output_dir: ./train_logs/improved_grpo_test
+overwrite_output_dir: true
+per_device_train_batch_size: 1
+save_strategy: steps
+save_steps: 200
+seed: 42
+warmup_ratio: 0.1
+
+# GRPO特定参数
+max_prompt_length: 32768
+max_completion_length: 2048
+num_generations: 8
+beta: 0.04
+len_control: true
+temporal: false
+
+# 奖励函数权重
+alpha_k: 1.0
+alpha_k_ratio: 1.0  
+alpha_a: 1.0
+alpha_g: 2.0
+
+# 经验回放参数
+use_experience_replay: true
+buffer_size: 10000
+replay_ratio: 0.5
+min_buffer_size: 100
+replay_strategy: mixed
+high_quality_ratio: 0.3
+replay_update_frequency: 1
+
+# 其他参数
+attn_implementation: flash_attention_2
+max_pixels: 1000000
+min_pixels: 3136
+use_peft: false
+use_timestamp: true
+
+# WandB配置
+report_to:
+  - wandb
+run_name: improved_grpo_with_replay

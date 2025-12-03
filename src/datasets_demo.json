@@ -1,0 +1,6 @@
+{
+    "SegZero": "/datasets/omni/refCOCOg_2k_840/",
+    "ReVOS": "/datasets/omni/Sa2VA/video_datas/revos/",
+    "MeVIS": "/datasets/omni/Sa2VA/video_datas/mevis/",
+    "RefAVS": "/datasets/omni/REFAVS/"
+}
